@@ -1,7 +1,21 @@
+"""
+This module contains unittests for the HistoricalDate class.
+It tests the creation of dates, including validations for BCE and CE formats, 
+and checks various functionalities such as date arithmetic and comparisons.
+"""
+
+# Imports
 import unittest
 from historical_date import HistoricalDate
 
+# Classes
 class TestHistoricalDate(unittest.TestCase):
+    """
+    Test suite for the HistoricalDate class.
+
+    This class tests the correct initialization of dates, ensuring that invalid dates raise appropriate errors,
+    and that date arithmetic and comparisons behave as expected under various scenarios including BCE to CE transitions.
+    """
     def test_date_creation(self):
         # Test valid date creation
         date = HistoricalDate(2023, 4, 28)

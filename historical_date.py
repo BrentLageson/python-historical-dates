@@ -1,8 +1,29 @@
+"""
+This module provides the HistoricalDate class to handle dates in both BCE and CE formats.
+It simplifies working with historical dates by allowing creation, manipulation, and comparison
+of dates far back into the past or future, without the complexities of modern datetime libraries.
+"""
+
+# Imports
+import calendar
+
+# Classes
 class HistoricalDate:
+    """
+    Represents a date in history, supporting both BCE and CE dates.
+
+    Attributes:
+        year (int): The year of the date, negative for BCE and positive for CE.
+        month (int): The month of the date, ranging from 1 (January) to 12 (December).
+        day (int): The day of the month, ranging from 1 to 31 based on the month.
+
+    Methods:
+        add_years(self, years): Adds or subtracts years from the date, adjusting the BCE/CE setting as needed.
+    """
     def __init__(self, year, month, day):
-        if not (1 <= month <= 12):
+        if not 1 <= month <= 12:
             raise ValueError("Month must be between 1 and 12")
-        if not (1 <= day <= 31):
+        if not 1 <= day <= 31:
             raise ValueError("Day must be between 1 and 31")
         if day > calendar.monthrange(year if year >= 0 else year - 1, month)[1]:
             raise ValueError("Invalid day for the given month and year")

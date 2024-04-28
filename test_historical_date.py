@@ -1,7 +1,5 @@
 """
 This module contains unittests for the HistoricalDate class.
-It tests the creation of dates, including validations for BCE and CE formats, 
-and checks various functionalities such as date arithmetic and comparisons.
 """
 
 # Imports

@@ -1,7 +1,5 @@
 """
 This module provides the HistoricalDate class to handle dates in both BCE and CE formats.
-It simplifies working with historical dates by allowing creation, manipulation, and comparison
-of dates far back into the past or future, without the complexities of modern datetime libraries.
 """
 
 # Imports
@@ -21,6 +19,8 @@ class HistoricalDate:
         add_years(self, years): Adds or subtracts years from the date, adjusting the BCE/CE setting as needed.
     """
     def __init__(self, year, month, day):
+        if year == 0:
+            raise ValueError("Year must be non-zero")
         if not 1 <= month <= 12:
             raise ValueError("Month must be between 1 and 12")
         if not 1 <= day <= 31:

@@ -11,8 +11,8 @@ class TestHistoricalDate(unittest.TestCase):
     """
     Test suite for the HistoricalDate class.
 
-    This class tests the correct initialization of dates, ensuring that invalid dates raise appropriate errors,
-    and that date arithmetic and comparisons behave as expected under various scenarios including BCE to CE transitions.
+    This class tests the correct initialization of dates, 
+    ensuring that invalid dates raise appropriate errors.
     """
     def test_date_creation(self):
         """

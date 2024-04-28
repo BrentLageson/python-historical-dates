@@ -37,6 +37,9 @@ class HistoricalDate:
         return (self.year, self.month, self.day) == (other.year, other.month, other.day)
 
     def add_years(self, years):
+        """
+        Modify HistoricalDate object by adding years to it. 
+        """
         self.year += years
 
     # Add more methods here:

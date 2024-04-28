@@ -4,7 +4,7 @@ This module contains unittests for the HistoricalDate class.
 
 # Imports
 import unittest
-from historical_date import HistoricalDate
+from .historical_date import HistoricalDate
 
 # Classes
 class TestHistoricalDate(unittest.TestCase):

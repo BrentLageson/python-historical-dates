@@ -9,7 +9,7 @@ with open('README.md', mode='r', encoding='utf-8') as readme_file:
 
 setup(
     name='historicaldates',
-    version='1.0.0',
+    version='1.0.1',
     author='Brent Lageson',
     author_email='brent.lageson@gmail.com',
     description='Python library for handling BCE and CE dates.',

@@ -1,8 +1,8 @@
-name: Python CI
+name: Unit Testing
 
 on:
   pull_request:
-    branches: [ main ]  # Or whichever branches you want to run tests on
+    branches: [ main ]
 
 jobs:
   build:

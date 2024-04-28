@@ -15,6 +15,9 @@ class TestHistoricalDate(unittest.TestCase):
     and that date arithmetic and comparisons behave as expected under various scenarios including BCE to CE transitions.
     """
     def test_date_creation(self):
+        """
+        Test the creation of HistoricalDate objects
+        """
         # Test valid date creation
         date = HistoricalDate(2023, 4, 28)
         self.assertEqual((date.year, date.month, date.day), (2023, 4, 28))
@@ -24,6 +27,9 @@ class TestHistoricalDate(unittest.TestCase):
         self.assertEqual((date_bce.year, date_bce.month, date_bce.day), (-500, 1, 1))
 
     def test_invalid_date_creation(self):
+        """
+        Test the creation of invalid HistoricalDate objects
+        """
         # Test invalid month
         with self.assertRaisesRegex(ValueError, "Month must be between 1 and 12"):
             HistoricalDate(2023, 13, 1)
@@ -41,6 +47,9 @@ class TestHistoricalDate(unittest.TestCase):
             HistoricalDate(2023, 4, 31)  # April has 30 days
 
     def test_date_comparison(self):
+        """
+        Test the comparison of HistoricalDate objects
+        """
         date1 = HistoricalDate(2023, 4, 28)
         date2 = HistoricalDate(2023, 4, 28)
         date3 = HistoricalDate(2022, 4, 28)
@@ -48,6 +57,9 @@ class TestHistoricalDate(unittest.TestCase):
         self.assertTrue(date1 != date3)
 
     def test_add_years(self):
+        """
+        Test addition of years to HistoricalDate objects
+        """
         date = HistoricalDate(2020, 1, 1)
         date.add_years(5)
         self.assertEqual((date.year, date.month, date.day), (2025, 1, 1))
@@ -58,6 +70,9 @@ class TestHistoricalDate(unittest.TestCase):
         self.assertEqual((date_bce.year, date_bce.month, date_bce.day), (1, 12, 31))
 
     def test_str(self):
+        """
+        Test object str
+        """
         date = HistoricalDate(2023, 4, 28)
         self.assertEqual(str(date), "4/28/2023 CE")
 

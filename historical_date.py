@@ -14,9 +14,6 @@ class HistoricalDate:
         year (int): The year of the date, negative for BCE and positive for CE.
         month (int): The month of the date, ranging from 1 (January) to 12 (December).
         day (int): The day of the month, ranging from 1 to 31 based on the month.
-
-    Methods:
-        add_years(self, years): Adds or subtracts years from the date, adjusting the BCE/CE setting as needed.
     """
     def __init__(self, year, month, day):
         if year == 0:
